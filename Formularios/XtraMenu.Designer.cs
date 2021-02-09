@@ -47,7 +47,10 @@
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.LblConsultasCaratera = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.BtnLotesLibres = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnRcdFecha = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.BtnEstadoCuenta = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnInformePresupuesto = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnInformeLotes = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Contenedor = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
@@ -56,7 +59,7 @@
             this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
             this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BtnRcdFecha = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnSaldoCartera = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
@@ -97,7 +100,7 @@
             // 
             // skinPaletteRibbonGalleryBarItem1
             // 
-            this.skinPaletteRibbonGalleryBarItem1.Caption = "skinPaletteRibbonGalleryBarItem1";
+            this.skinPaletteRibbonGalleryBarItem1.Caption = "Galeria Skines";
             this.skinPaletteRibbonGalleryBarItem1.Id = 7;
             this.skinPaletteRibbonGalleryBarItem1.Name = "skinPaletteRibbonGalleryBarItem1";
             // 
@@ -146,7 +149,7 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 89);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 424);
+            this.accordionControl1.Size = new System.Drawing.Size(250, 424);
             this.accordionControl1.TabIndex = 2;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -199,7 +202,10 @@
             this.LblConsultasCaratera.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.BtnLotesLibres,
             this.BtnRcdFecha,
-            this.BtnEstadoCuenta});
+            this.BtnEstadoCuenta,
+            this.BtnInformePresupuesto,
+            this.BtnInformeLotes,
+            this.BtnSaldoCartera});
             this.LblConsultasCaratera.Expanded = true;
             this.LblConsultasCaratera.Name = "LblConsultasCaratera";
             this.LblConsultasCaratera.Text = "Consultas Cartera";
@@ -211,6 +217,13 @@
             this.BtnLotesLibres.Text = "Lotes Libres";
             this.BtnLotesLibres.Click += new System.EventHandler(this.BtnLotesLibres_Click);
             // 
+            // BtnRcdFecha
+            // 
+            this.BtnRcdFecha.Name = "BtnRcdFecha";
+            this.BtnRcdFecha.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnRcdFecha.Text = "Recaudos Fecha";
+            this.BtnRcdFecha.Click += new System.EventHandler(this.BtnRcdFecha_Click);
+            // 
             // BtnEstadoCuenta
             // 
             this.BtnEstadoCuenta.Name = "BtnEstadoCuenta";
@@ -218,12 +231,26 @@
             this.BtnEstadoCuenta.Text = "Esatado Cuenta";
             this.BtnEstadoCuenta.Click += new System.EventHandler(this.BtnEstadoCuenta_Click);
             // 
+            // BtnInformePresupuesto
+            // 
+            this.BtnInformePresupuesto.Name = "BtnInformePresupuesto";
+            this.BtnInformePresupuesto.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnInformePresupuesto.Text = "Informe Presupuesto";
+            this.BtnInformePresupuesto.Click += new System.EventHandler(this.BtnInformePresupuesto_Click);
+            // 
+            // BtnInformeLotes
+            // 
+            this.BtnInformeLotes.Name = "BtnInformeLotes";
+            this.BtnInformeLotes.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnInformeLotes.Text = "Informe Lotes";
+            this.BtnInformeLotes.Click += new System.EventHandler(this.BtnInformeLotes_Click);
+            // 
             // Contenedor
             // 
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contenedor.Location = new System.Drawing.Point(260, 89);
+            this.Contenedor.Location = new System.Drawing.Point(250, 89);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(1057, 424);
+            this.Contenedor.Size = new System.Drawing.Size(1067, 424);
             this.Contenedor.TabIndex = 3;
             // 
             // barSubItemNavigation
@@ -273,12 +300,12 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Module";
             // 
-            // BtnRcdFecha
+            // BtnSaldoCartera
             // 
-            this.BtnRcdFecha.Name = "BtnRcdFecha";
-            this.BtnRcdFecha.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.BtnRcdFecha.Text = "Recaudos Fecha";
-            this.BtnRcdFecha.Click += new System.EventHandler(this.BtnRcdFecha_Click);
+            this.BtnSaldoCartera.Name = "BtnSaldoCartera";
+            this.BtnSaldoCartera.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnSaldoCartera.Text = "Listado Cartera";
+            this.BtnSaldoCartera.Click += new System.EventHandler(this.BtnSaldoCartera_Click);
             // 
             // XtraMenu
             // 
@@ -336,5 +363,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar repositoryItemZoomTrackBar1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement BtnRcdFecha;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnInformePresupuesto;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnInformeLotes;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnSaldoCartera;
     }
 }

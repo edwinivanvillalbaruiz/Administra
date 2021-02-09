@@ -37,6 +37,7 @@
                 GrdGrilla.ExportToXlsx(dlg.FileName);
             }
         }
+
         public static void ExportarExel(PivotGridControl GrdGrilla)
         {
             SaveFileDialog dlg = new SaveFileDialog();
@@ -47,6 +48,7 @@
                 GrdGrilla.ExportToXlsx(dlg.FileName);
             }
         }
+
         public static void ExportarPdf(GridControl GrdGrilla)
         {
             SaveFileDialog dlg = new SaveFileDialog();
@@ -57,6 +59,7 @@
                 GrdGrilla.ExportToPdf(dlg.FileName);
             }
         }
+
         public static void ExportarPdf(PivotGridControl GrdGrilla)
         {
             SaveFileDialog dlg = new SaveFileDialog();
@@ -67,10 +70,12 @@
                 GrdGrilla.ExportToPdf(dlg.FileName);
             }
         }
+
         public static string GetSetting(string appName, string section, string key)
         {
             return GetSetting(appName, section, key, string.Empty);
         }
+
         public static string GetSetting(string appName, string section, string key, string sDefault)
         {
             RegistryKey rk = Registry.CurrentUser.OpenSubKey(@"Software\VB and VBA Program Settings\" + appName + "\\" + section);
@@ -80,6 +85,7 @@
             //
             return s;
         }
+
         public static void impirmir(GridControl GrdGrilla, string MiTitulo, byte[] logo)
         {
             Titulo = MiTitulo;
@@ -94,6 +100,7 @@
             link.CreateDocument();
             link.ShowPreview();
         }
+
         public static void impirmir(GridControl GrdGrilla, string MiTitulo)
         {
             Titulo = MiTitulo;
@@ -103,6 +110,7 @@
             link.CreateDocument();
             link.ShowPreview();
         }
+
         public static void impirmir(PivotGridControl GrdGrilla, string MiTitulo)
         {
             Titulo = MiTitulo;
@@ -112,6 +120,7 @@
             link.CreateDocument();
             link.ShowPreview();
         }
+
         public static void SaveSetting(string appName, string section, string key, string setting)
         {
             // Los datos se guardan en:
@@ -119,6 +128,7 @@
             RegistryKey rk = Registry.CurrentUser.CreateSubKey(@"Software\VB and VBA Program Settings\" + appName + "\\" + section);
             rk.SetValue(key, setting);
         }
+
         private static Image byteArrayToImage(byte[] byteArrayIn)
         {
             using (MemoryStream mStream = new MemoryStream(byteArrayIn))
@@ -126,6 +136,7 @@
                 return Image.FromStream(mStream);
             }
         }
+
         private static void Link_CreateMarginalHeaderArea(object sender, CreateAreaEventArgs e)
         {
             TextBrick brick;
@@ -146,5 +157,7 @@
         public DateTime FechaInicio { get; set; }
         public string BaseDatos { get; set; }
         public string IdAdjudicacion { get; set; }
+        public string Mes { get; set; }
+        public string Año { get; set; }
     }
 }

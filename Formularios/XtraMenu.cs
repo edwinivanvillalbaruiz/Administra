@@ -118,5 +118,41 @@
 
         }
         #endregion Metodos
+
+        private void BtnInformePresupuesto_Click(object sender, EventArgs e)
+        {
+            if (!Contenedor.Controls.Contains(UseInfoPresupuesto.Instance))
+            {
+                Contenedor.Controls.Add(UseInfoPresupuesto.Instance);
+                UseInfoPresupuesto.Instance.Dock = DockStyle.Fill;
+                UseInfoPresupuesto.Instance.BringToFront();
+                UseInfoPresupuesto.Instance.BtnSalir.ItemClick += BtnSalir_ItemClick;
+            }
+            UseInfoPresupuesto.Instance.BringToFront();
+        }
+
+        private void BtnInformeLotes_Click(object sender, EventArgs e)
+        {
+            if (!Contenedor.Controls.Contains(UseCnsLotes.Instance))
+            {
+                Contenedor.Controls.Add(UseCnsLotes.Instance);
+                UseCnsLotes.Instance.Dock = DockStyle.Fill;
+                UseCnsLotes.Instance.BringToFront();
+                UseCnsLotes.Instance.BtnSalir.ItemClick += BtnSalir_ItemClick;
+            }
+            UseCnsLotes.Instance.BringToFront();
+        }
+
+        private void BtnSaldoCartera_Click(object sender, EventArgs e)
+        {
+            if (!Contenedor.Controls.Contains(UserSaldoCartera.Instance))
+            {
+                Contenedor.Controls.Add(UserSaldoCartera.Instance);
+                UserSaldoCartera.Instance.Dock = DockStyle.Fill;
+                UserSaldoCartera.Instance.BringToFront();
+                UserSaldoCartera.Instance.BtnSalir.ItemClick += BtnSalir_ItemClick;
+            }
+            UserSaldoCartera.Instance.BringToFront();
+        }
     }
 }
